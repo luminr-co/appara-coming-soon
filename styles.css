@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display+SC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background-color: black;
+  background-image: url(background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display SC", serif;
+}
+
+h1::after {
+  bottom: -3rem;
+  content: attr(data-text);
+  left: 0;
+  position: absolute;
+  transform: rotateX(180deg);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(2px);
+}
+
+.insta {
+  position: relative;
+  top: 12.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h1::after {
+    bottom: -6rem;
+  }
+
+  .insta {
+    font-size: 1.5rem;
+  }
+}
